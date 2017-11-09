@@ -33,6 +33,6 @@ while True:
         history.append(k)
         if guess(k):
             break
-    # 输入h2查看转入历史
+    # 输入h?查看转入历史
     elif line == 'history' or line == 'h?':
         print list(history)
