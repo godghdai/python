@@ -18,6 +18,6 @@ print c2.most_common(3)
 # 正则 统计2-3.txt中单词出现的频度
 import re
 
-txt = open('res/2-3.txt').read()
+txt = open('./res/2-3.txt').read()
 c3 = Counter(re.split('\W+', txt))
 print c3.most_common(10)
