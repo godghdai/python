@@ -71,3 +71,33 @@ def pf4(p1,p2,**kw):
 pf4('pa','pb',a=1,b=2)
 
 # flask
+
+
+#　装饰器的副作用
+# 文档注释和函数名改变了
+def pf55():
+    '''
+      This is pf55
+    '''
+    print(pf55.__name__)
+
+print(help(pf55))
+
+
+from functools import wraps
+
+def time_decorator4(func):
+    @wraps(func)
+    def wrapper(*args,**kw):
+        print(time.time())
+        func(*args,**kw)
+    return wrapper
+
+@time_decorator4  
+def pf56():
+    '''
+      This is pf56
+    '''
+    print(pf56.__name__)
+
+help(pf56)
